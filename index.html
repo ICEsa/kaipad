@@ -1,15 +1,93 @@
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Hello ICE</title>
+  
+    <style>
+    *,
+    ::before,
+    ::after {
+      box-sizing: border-box;
+    }
+
+    .container {
+      counter-reset: box;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-auto-rows: 1fr;
+      grid-auto-flow: dense;
+      grid-gap: 5px;
+      max-width: 1080px;
+      height: 100vh;
+      margin: 0 auto;
+    }
+
+    .box {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .box>img {
+      flex: 1;
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    .box>figcaption {
+      padding: 0.5rem 1rem;
+      background-color: #48CFAD;
+      color: #fff;
+      text-align: center;
+    }
+
+    .box:nth-child(2n + 1) {
+      grid-row: span 2;
+      grid-column: span 2;
+    }
+  </style>
+  
 </head>
 
 <body>
-  <center> <h1>Hello</h1> </center>
+<center> <h1>Hello</h1> </center>
 <center> <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png"> </img> </center>
   
 <button type="button"
 onclick="document.getElementById('demo').innerHTML = Date()">
 Click me to display Date and Time.</button>
+    <div class="container">
+    <figure class="box">
+      <img src="https://source.unsplash.com/collection/311028" />
+      <figcaption>Autumn</figcaption>
+    </figure>
+    <figure class="box">
+      <img src="https://source.unsplash.com/collection/395888" />
+      <figcaption>Halloween</figcaption>
+    </figure>
+    <figure class="box">
+      <img src="https://source.unsplash.com/collection/1999207" />
+      <figcaption>Political</figcaption>
+    </figure>
+    <figure class="box">
+      <img src="https://source.unsplash.com/collection/827807" />
+      <figcaption>Technic</figcaption>
+    </figure>
+    <figure class="box">
+      <img src="https://source.unsplash.com/collection/1538150" />
+      <figcaption>Milkyway</figcaption>
+    </figure>
+    <figure class="box">
+      <img src="https://source.unsplash.com/collection/1424240" />
+      <figcaption>Animals</figcaption>
+    </figure>
+    <figure class="box">
+      <img src="https://source.unsplash.com/collection/1767181" />
+      <figcaption>Blancs</figcaption>
+    </figure>
+  </div>
 
 <p id="demo"></p>
   
